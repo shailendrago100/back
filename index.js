@@ -56,6 +56,7 @@ mongoose.connect(process.env.MONGO_URL, { family: 4 })
   .catch((error) => {
     console.log(error);
   });
+  mongoose.set('strictQuery', false);
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_NAME,
